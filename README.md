@@ -34,7 +34,7 @@ CPU-intensive exercise (but bad for a real estimation!).
 ## Set up a Matlab Job
 
 First, we'll need to create a working directory, you can either run 
-`$ tutorial Matlab-ScalingUp` or type the following:
+`$ tutorial Matlab-ScalingUp` or `$ git clone https://github.com/OSGConnect/tutorial-Matlab-ScalingUp` to copy all the necessary files. Otherwise, you can create the files type the following:
 
     $ mkdir tutorial-Matlab-ScalingUp
     $ cd tutorial-Matlab-ScalingUp
@@ -81,7 +81,7 @@ To see which releases are available on OSG visit our available [containers](http
 
 Let us say you have created the standalone binary `mcpi`. Transfer the file `mcpi` to your Access Point. Alternatively, you may also use the readily available files by using the `git clone` command: 
 
-    $ git clone https://github.com/OSGConnect/tutorial-Matlab-ScalingUp # Copies input and script files to the directory tutorial-matlab-HelloWorld.
+    $ git clone https://github.com/OSGConnect/tutorial-Matlab-ScalingUp # Copies input and script files to the directory tutorial-Matlab-ScalingUp.
  
 This will create a directory `tutorial-Matlab-ScalingUp`. Inside the directory, you will see the following files
    
