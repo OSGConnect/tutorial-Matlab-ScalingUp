@@ -6,19 +6,18 @@ ospool:
 # Scaling up compute resources
 
 Scaling up the computational resources is a big advantage for doing
-certain large scale calculations on OSG. Consider the extensive
+certain large-scale calculations on OSG. Consider the extensive
 sampling for a multi-dimensional Monte Carlo integration or molecular
-dynamics simulation with several initial conditions. These type of
-calculations require submitting lot of jobs.
+dynamics simulation with several initial conditions. These types of
+calculations require submitting a lot of jobs.
 
-In the previous example, we submitted the job to a single worker
+In the previous example, we submitted the job to a single-worker
 machine. About a million CPU hours per day are available to OSG users
 on an opportunistic basis. Learning how to scale up and control large
-numbers of jobs to realize the full potential of distributed high
-throughput computing on the OSG.
+numbers of jobs will enable us to realize the full potential of distributed high throughput computing on the OSG.
 
 In this section, we will see how to scale up the calculations with
-simple example. Once we understand the basic HTCondor script, it is easy
+a simple example. Once we understand the basic HTCondor script, it is easy
 to scale up.
 
 ## Background
@@ -39,7 +38,7 @@ First, we'll need to create a working directory, you can either run
     $ mkdir tutorial-Matlab-ScalingUp
     $ cd tutorial-Matlab-ScalingUp
 
-## Matlab Script
+### Matlab Script
 
 Create an Matlab script by typing the following into a file called `mcpi.m`:
 ```
@@ -61,7 +60,7 @@ Create an Matlab script by typing the following into a file called `mcpi.m`:
   fprintf(pi_est);
   end
 ```
-## Compilation 
+### Compilation 
 
 *OSG does not have a license to use the MATLAB compiler*. On a Linux server with a MATLAB 
 license, invoke the compiler `mcc`.  We turn off all graphical options (`-nodisplay`), disable Java (`-nojvm`), and instruct MATLAB to run this application as a single-threaded application (`-singleCompThread`):
@@ -73,7 +72,7 @@ The flag `-m` means C language translation during compilation, and the flag `-R`
     `mcpi, run_mcpi.sh, mccExcludedFiles.log` and `readme.txt`
 
 The file `mcpi` is the standalone executable. The file `run_mcpi.sh` is MATLAB generated shell script. `mccExcludedFiles.log` is the log file and `readme.txt` contains the information about the compilation process. We just need the standalone binary file `mcpi`. 
-## Running standalone binary applications on OSG
+### Running standalone binary applications on OSG
 
 To see which releases are available on OSG visit our available [containers](https://portal.osg-htc.org/documentation/htc_workloads/using_software/available-contaners-list/) page :
 
@@ -130,7 +129,7 @@ From your work directory, type
 
 Absence of `Log` directory may send the jobs to held state. 
 
-### Job submmision 
+## Job submmision 
 
 We submit the job using the `condor_submit` command as follows
 
