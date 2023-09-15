@@ -1,0 +1,12 @@
+universe = vanilla                          # One OSG Connect vanilla, the preffered job universe is "vanilla"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-matlab-runtime:R2020b"
+
+executable =  mcpi                
+arguments = $(Process)
+
+Output = Log/job.$(Process).out⋅            # standard output 
+Error =  Log/job.$(Process).err             # standard error
+Log =    Log/job.$(Process).log             # log information about job execution
+
+requirements = HAS_SINGULARITY == TRUE 
+queue 100                                   # Submit 100  jobs
