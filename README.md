@@ -84,7 +84,7 @@ Let us say you have created the standalone binary `mcpi`. Transfer the file `mcp
  
 This will create a directory `tutorial-Matlab-ScalingUp`. Inside the directory, you will see the following files
    
-    mcpi             # compiled executable binary of hello_world.m
+    mcpi             # compiled executable binary of mcpi.m
     mcpi.m           # matlab program
     mcpi.submit      # condor job description file
     mcpi.sh          # execution script
