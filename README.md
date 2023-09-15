@@ -58,7 +58,7 @@ Create an Matlab script by typing the following into a file called `mcpi.m`:
   % Estimate pi as the ratio of points inside circle to total points
   pi_est = 4 * inside / N; % pi estimate
   % Display the result
-  fprintf('The estimated value of pi is %.4f\n', pi_est);
+  fprintf(pi_est);
   end
 ```
 ## Compilation 
@@ -107,7 +107,6 @@ If you get the an output of the estimated value of pi, the binary execution is s
 ### Job execution and submission files
 
 Let us take a look at `mcpi.submit` file: 
-
 
     universe = vanilla                          # One OSG Connect vanilla, the preffered job universe is "vanilla"
     +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-matlab-runtime:R2020b"
