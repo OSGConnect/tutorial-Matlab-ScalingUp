@@ -91,13 +91,13 @@ This will create a directory `tutorial-Matlab-ScalingUp`. Inside the directory, 
 
 ### Executing the MATLAB application binary
 
-The compilation and execution environment need to the same. The file `mcpi` is a standalone binary of the matlab program `mcpi.m` which was compiled using MATLAB 2020b on a Linux platform. The Access Point and many of the worker nodes on OSG are based on Linux platform. In addition to the platform requirement, we also need to have the same MATLAB Runtime version. 
+The compilation and execution environment need to the same. The file `mcpi` is a standalone binary of the matlab program `mcpi.m` which was compiled using MATLAB 2024a on a Linux platform. The Access Point and many of the worker nodes on OSG are based on Linux platform. In addition to the platform requirement, we also need to have the same MATLAB Runtime version. 
 
-Load the MATLAB runtime for 2020b version via apptainer/singularity command.  On the terminal prompt, type
+Load the MATLAB runtime for 2024a version via apptainer/singularity command.  On the terminal prompt, type
 
-    $ apptainer shell /cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-matlab-runtime:R2020b
+    $ apptainer shell /ospool/uc-shared/public/OSG-Staff/matlab_r2024.sif
 
-The above command sets up the environment to run the matlab/2020b runtime applications.  Now execute the binary
+The above command sets up the environment to run the matlab/2024a runtime applications.  Now execute the binary
 
     $apptainer/singularity> ./mcpi 10
 
