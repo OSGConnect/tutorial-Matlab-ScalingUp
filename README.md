@@ -107,8 +107,7 @@ If you get the an output of the estimated value of pi, the binary execution is s
 
 Let us take a look at `mcpi.submit` file: 
 
-    universe = vanilla                          # One OSG Connect vanilla, the preffered job universe is "vanilla"
-    +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-matlab-runtime:R2020b"
+    container_image = osdf:///ospool/uc-shared/public/OSG-Staff/matlab_r2024.sif
     
     executable =  mcpi                
     arguments = $(Process)
